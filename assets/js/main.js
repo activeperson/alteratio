@@ -19,6 +19,11 @@ $(document).ready(function() {
         $(this).toggleClass('active');
     });
 
+    $('.main_files_col_cards_lines span').on('click', function(){
+        $('.main_files_col_cards_lines span').removeClass('active');
+       $(this).addClass('active');
+    });
+
     $('.header_account').on('click', function(){
         $('.header_account_popup').toggleClass('active');
     });

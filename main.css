@@ -518,14 +518,32 @@ body.chat-open .overflow{
 	display: block;
 	background: rgba(0,0,0,.5);
 }
+.main_files_col_center .logs_top_filter_col_input {
+	width: 338px;
+}
+.main_files_col_center {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 24px 0;
+}
 .header_chat_wrapper_popup .logs_top_filter_col_input {
 	padding: 24px 24px 0 24px;
 }
 .header_chat .logs_top_filter_col_input {
 	margin-left: 0;
 }
+.files .header {
+	z-index: 20;
+	position: relative;
+}
+.main_files_col_col {
+	display: flex;
+	align-items: center;
+}
 .header {
 	padding-top: 6px;
+	
 	background: #ffffff;
 	padding-bottom: 6px;
 	box-shadow: 0px 2px 10px 0px #00000026;
@@ -534,6 +552,7 @@ body.chat-open .overflow{
 	position: absolute;
 	box-shadow: 0px 4px 8px 0px #00000040;
 	border-radius: 20px;
+	z-index: 200;
 }
 .header_chat {
 	position: relative;
@@ -1673,8 +1692,211 @@ body.modal-active {
 	text-align: left;
 	color: #29313D;
 }
+.files_all_files .show_options.active .settings_block_popup {
+	bottom: 130%;
+	top: auto;
+	left: auto;
+	right: 0;
+}
+.files_all_files_table table tbody tr:nth-child(1) .settings_block_popup, .files_all_files_table table tbody tr:nth-child(2) .settings_block_popup, .files_all_files_table table tbody tr:nth-child(3) .settings_block_popup, .files_all_files_table table tbody tr:nth-child(4) .settings_block_popup {
+	top: 130% !important;
+	bottom: auto !important;
+}
+.main_files_col .wrapper_files {
+	padding: 16px;
+}
 .modal_delete_files span {
 	font-weight: 700;
+}
+.main_files_col_cards_lines span {
+	display: flex;
+	padding: 7px 13px;
+	border: 3px solid #7A94B8;
+	align-items: center;
+	font-family: Poppins;
+	color: #3D4A5C;
+	font-size: 16px;
+	cursor: pointer;
+	font-weight: 600;
+	line-height: 20px;
+	text-align: center;
+}
+.main_files_col_cards_lines span.active:first-child {
+	border-color: #FF8A00;
+	background: #F0DCC2;
+	border-right: 3px solid #FF8A00 !important;
+}
+.main_files_col_cards_lines span.active:last-child {
+	border-color: #FF8A00;
+	background: #F0DCC2;
+	border-left: 3px solid #FF8A00;
+}
+.main_files_col_cards_lines span:not(.active):last-child {
+	border-left: 0;
+}
+.main_files_col_cards_lines span:first-child {
+	border-radius: 40px 0 0 40px;
+	border-right: 0;
+}
+.main_files_col_cards_lines span:first-child svg {
+	margin-right: 8px;
+}
+.main_files_col_cards_lines span:last-child svg {
+	margin-right: 8px;
+}
+.main_files_col_cards_lines span:last-child {
+	border-radius: 0 40px 40px 0;
+}
+.main_files_col_cards_lines svg {
+	display: block;
+}
+.files_all_files {
+	background: #ffffff;
+	overflow: hidden;
+	padding: 16px;
+	margin-bottom: 70px;
+	border-radius: 16px;
+}
+.files_all_files_navigation {
+	display: flex;
+	align-items: center;
+}
+.files_all_files_navigation > span svg {
+	margin-right: 8px;
+}
+.files_all_files_navigation > span > span {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: left;
+	color: #29313D;	
+}
+.files_all_files_navigation_arrow {
+	margin: 0 5px;
+}
+.files_all_files_top {
+	margin-bottom: 16px;
+}
+.files_all_files_table table {
+	width: 100%;
+}
+.files_all_files_name img {
+	margin-right: 8px;
+}
+.files_all_files_name span {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 24px;
+	text-align: left;
+	color: #29313D;
+}
+.files_all_files_name {
+	display: flex;
+	align-items: center;
+}
+.files_all_files_table table tbody tr td {
+	padding: 8px 16px;
+	vertical-align: middle;
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: left;
+	color: #29313D;
+}
+.files_all_files_table table tbody tr td:first-child {
+	padding-left: 8px;
+}
+.files_all_files_table table tbody tr:hover td {
+	background: #F2F4F8;
+}
+.files_all_files_table table tbody tr:hover td:first-child {
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+.files_all_files_buttons_button svg {
+	display: block;
+	cursor: pointer;
+}
+.files_all_files_buttons {
+	display: flex;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s linear;
+	justify-content: flex-end;
+}
+.files_all_files_table table tbody tr:hover .files_all_files_buttons {
+	opacity: 1;
+	visibility: visible;
+}
+.files_all_files_buttons .files_all_files_buttons_button:not(:last-child) {
+	margin-right: 32px;
+}
+.files_all_files_buttons > .files_all_files_buttons_button > svg:hover, .files_all_files_buttons > .files_all_files_buttons_button .companies_items_item_user_info_options svg:hover  {
+	padding: 2px;
+	background: #63EB5733;
+	border-radius: 100%;
+}
+.files_all_files_table table tbody tr:hover td:last-child {
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+.files_all_files_access {
+	padding: 4px 8px;
+	border: 1px solid #9CAFC9;
+	border-radius: 4px;
+	margin-left: 32px;
+	font-family: Poppins;
+	font-size: 16px;
+	color: #29313D;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: center;
+}
+.files_all_files_table table thead tr td:first-child {
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+.files_all_files_table table thead tr td:last-child {
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+.files_all_files_table table thead tr td {
+	font-family: Poppins;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 21px;
+	padding: 8px 16px;
+	background: #E4EAF1;
+	text-align: left;
+	color: #29313D;
+}
+.files_all_files_table table thead tr td span {
+	display: flex;
+	align-items: center;
+}
+.files_all_files_table table thead tr td span svg {
+	margin-left: 8px;
+}
+.files_all_files_navigation > span {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition: all .3s linear;
+	border-radius: 20px;
+	padding: 8px 15px;
+}
+.files_all_files_navigation > span:hover {
+	background: #5ACC0026;
+}
+.main_files_col_cards_lines {
+	display: flex;
+	border-radius: 40px;
+	align-items: center;
+	margin-left: 24px;
 }
 .wrapper_modal	{
 	background: #ffffff;
@@ -1683,4 +1905,12 @@ body.modal-active {
 	border-radius: 24px;
 	box-shadow: 0px 4px 16px 0px #00000040;
 	min-width: 400px;
+}
+.main_files {
+	display: grid;
+	grid-template-columns: 288px 1fr 300px;
+	grid-gap: 32px;
+}
+.main_files_col:first-child {
+	background: #ffffff;
 }
