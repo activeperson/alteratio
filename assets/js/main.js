@@ -14,6 +14,15 @@ $(document).ready(function() {
             $item.addClass('expanded');
         }
     });
+
+    $('#togglePassword').click(function() {
+        var input = $('#passwordInput');
+        console.log(132);
+        var type = input.attr('type') === 'password' ? 'text' : 'password';
+        input.attr('type', type);
+    });
+
+
     $('.show_options').on('click', function(){
         // $('.show_options').removeClass('active');
         $(this).toggleClass('active');

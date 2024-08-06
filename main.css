@@ -169,7 +169,7 @@ input[type=text]:hover, input[type=email]:hover, input[type=tel]:hover {
 input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus {
 	border-color: #FF8A00;
 }
-input[type=text], input[type=email], input[type=tel], input[type=number], select, textarea {
+input[type=text], input[type=email], input[type=tel], input[type=number], select, textarea, input[type=password] {
 	padding: 10px 16px;
 	border: 1px solid #BAC9DE;
 	font-family: "Poppins", sans-serif;
