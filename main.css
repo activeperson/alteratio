@@ -77,6 +77,9 @@ time, mark, audio, video {
 	display: flex;
 	align-items: center;
 }
+.login {
+	height: 100vh;
+}
 .logs_top_filter_col_input_checkbox .custom_checkbox span {
 	margin-right: 16px;
 }
@@ -1434,6 +1437,10 @@ h2 {
 	text-align: left;
 	color: #29313D;
 }
+.companies_items_item_content_col .settings_block_popup {
+	right: 0;
+	left: auto;
+}
 .companies_storages_item_second_spaces_filemanager ul > li > div:not(.show_options) {
 	transition: all .3s linear;
 	padding: 8px;
@@ -1444,6 +1451,9 @@ h2 {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+.show_options {
+	position: relative;
 }
 .show_options svg {
 	cursor: pointer;
@@ -1521,6 +1531,8 @@ h2 {
 	border: 1px solid #BAC9DE;
 	border-radius: 10px;
 	margin-top: 32px;
+	height: 300px;
+	overflow-y: scroll;
 	padding-left: 73px;
 }
 .custom_checkbox {

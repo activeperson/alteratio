@@ -7,10 +7,10 @@ $(document).ready(function() {
         $content.stop(true, true);
 
         if ($item.hasClass('expanded')) {
-            $content.hide('fast');
+            $content.hide();
             $item.removeClass('expanded');
         } else {
-            $content.show('fast');
+            $content.show();
             $item.addClass('expanded');
         }
     });
